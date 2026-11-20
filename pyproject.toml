@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "octodns-nameocean"
+version = "0.1.0"
+description = "octoDNS provider for NameOcean DNS"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "NameOcean", email = "support@nameocean.net" }]
+keywords = ["dns", "octodns", "nameocean", "dns-as-code"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: Name Service (DNS)",
+]
+dependencies = ["octodns>=1.10", "requests>=2.27"]
+
+[project.optional-dependencies]
+dev = ["pytest", "requests_mock"]
+
+[project.urls]
+Homepage = "https://github.com/NameOcean/octodns-nameocean"
+Documentation = "https://nameocean.net/developers/dns/"
+Issues = "https://github.com/NameOcean/octodns-nameocean/issues"
+
+[tool.setuptools]
+packages = ["octodns_nameocean"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
