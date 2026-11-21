@@ -10,7 +10,7 @@ pip install octodns octodns-nameocean
 
 ## Configure
 
-Create an [API key](https://nameocean.net/dashboard/api/) with `dns:read` and `dns:write`, and limit it to your CI's IP address if you can. API keys need [two-step login](https://nameocean.net/dashboard/security/) on the account.
+Create an [API key](https://nameocean.net/dashboard/api/) with `dns:read` and `dns:write`. Under "Only these domains", list the zones octoDNS manages: the key then can't touch your other domains, servers or billing. If your CI has fixed IP addresses, limit the key to those too. API keys need [two-step login](https://nameocean.net/dashboard/security/) on the account.
 
 ```yaml
 # config/production.yaml
